@@ -1,0 +1,98 @@
+.login {
+    display: flex;
+}
+
+.login__left {
+    background-image: url("https://images.unsplash.com/photo-1542353436-312f0e1f67ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=854&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 92vh;
+    flex: 0.6;
+    padding: 30px;
+}
+
+.login__left > div > h1 {
+    color: #fff;
+}
+
+.login__leftInfo h2 {
+    color: #ff7e1d;
+    font-size: 25px;
+    font-weight: 600;
+    overflow: hidden; 
+    border-right: .15em solid transparent; 
+    white-space: nowrap;
+    margin: 10px 10px 10px 10px; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+  }
+
+.login__right {
+    flex: 0.4;
+    padding: 30px;
+}
+
+.login__right > div > img {
+    margin-left: 100px;
+}
+
+.login__rightInfo > form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.login__rightInfo > form > div {
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 70%;
+}
+
+
+.MuiInput-underline:before {
+    border-bottom: 1px solid white !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 1px solid white !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.login__rightInfo > form > button {
+    background-color: #ff7e1d !important;
+    text-transform: inherit;
+    width: 35%;
+    margin-left: 100px;
+}
+
+.login__rightInfo > form > button:hover {
+    background-color: #fff !important;
+    color: #ff7e1d !important;
+    text-transform: inherit;
+    width: 35%;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+  
