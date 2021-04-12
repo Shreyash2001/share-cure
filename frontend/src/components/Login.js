@@ -1,19 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Login.css"
+import {useDispatch, useSelector} from "react-redux"
 import Button from '@material-ui/core/Button';
-import { FormControl, Input, InputAdornment } from '@material-ui/core';
+import { CircularProgress, FormControl, Input, InputAdornment } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
 import LockIcon from '@material-ui/icons/Lock';
-import {useHistory} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
+import { authUser } from '../actions/userActions';
 
 function Login() {
 
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
     const history = useHistory()
+    const dispatch = useDispatch()
+
+    const {success, loading} = useSelector(state => state.userLogin)
+    
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    history.push("/")
+    dispatch(authUser(email, password))
   }
+
+  useEffect(() => {
+    if(success) {
+      history.push("/")
+    }
+  }, [success, history])
     return (
         <div className="login">
 
@@ -40,6 +55,7 @@ function Login() {
           }
           placeholder="Email"
           type="email"
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
       </FormControl>
@@ -54,11 +70,14 @@ function Login() {
           }
           placeholder="password"
           type="password"
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
       </FormControl>
+      <p style={{marginLeft:"50px"}}>Not have an account? <Link style={{textDecoration:"none", color:"#222222"}} to="/register"><b style={{textDecoration:"underline"}}>click here</b></Link></p>
             <Button type="submit">Submit</Button>
             </form>
+            {loading && <CircularProgress style={{color:"#ff7e1d"}} />}
         </div>
         </div>
         </div>

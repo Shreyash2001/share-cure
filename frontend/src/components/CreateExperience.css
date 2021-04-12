@@ -1,0 +1,207 @@
+.createExperience {
+    display: flex;
+}
+
+.createExperience__form {
+    padding-left: 70px;
+    padding-bottom: 35px;
+    left: 90px;
+}
+
+
+.createExperience__content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.createExperience__content > input[type= "text"] {
+    height: 30px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 42%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+
+
+.createExperience__content > input[type=text]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+
+.createExperience__content > label {
+    color: #6d6b6b;
+    margin-bottom: 10px;
+}
+
+.createExperience__right {
+    flex: 0.6;
+}
+
+.createExperience__about > textarea[type= "text"] {
+    height: 100px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 72%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+.createExperience__about > textarea[type= "text"]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+
+.createExperience__description > textarea[type= "text"] {
+    height: 500px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 72%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+.createExperience__description > textarea[type= "text"]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+.createExperience__link > input[type= "text"] {
+    height: 30px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 42%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+
+
+.createExperience__link > input[type=text]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+
+.createExperience__image > input[type= "text"] {
+    height: 30px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 42%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+
+
+.createExperience__image > input[type=text]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+.createExperience__right > input {
+    height: 39px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    outline-width: 0;
+    width: 85%;
+}
+
+
+.createExperience__bedroomInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.createExperience__about > h3 {
+    font-size: 20px;
+    color: #222222;
+}
+
+.createExperience__about > textarea {
+    height: 80px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    outline-width: 0;
+    width: 45%;
+}
+
+
+.createExperience__description > textarea {
+    width: 50%;
+    height: 20vh;
+    border-radius: 12px;
+    padding: 12px;
+    outline-width: 0;
+    font-size:20px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    
+}
+
+.createExperience__numberOfBed > input {
+    height: 30px;
+    border: 1px solid lightgray;
+    margin-bottom: 30px;
+    outline-width: 0;
+    width: 42%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    
+}
+
+
+.createExperience__button {
+    background: #fd746c !important;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c) !important;  
+    background: linear-gradient(to right, #ff9068, #fd746c) !important; 
+    border-radius: 12px !important;
+    color: #fff !important;
+    text-transform: inherit !important;
+}
+
+
+.MuiStepIcon-root.MuiStepIcon-active {
+    color: orange !important;
+}
+.MuiStepIcon-root.MuiStepIcon-completed {
+    color: orange !important;
+}

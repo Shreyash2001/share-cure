@@ -1,0 +1,49 @@
+.card {
+    padding-left: 35px;
+    transition: transform 450ms;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.card__info {
+    border: 1px solid lightgray;
+    background-color: #fff;
+    max-width: 23vw;
+    min-width: 20vw;
+    min-height: 43vh;
+    max-height: 180vh;
+    border-radius: 12px;
+    margin: 10vh 0 0 10vh;
+}
+
+.card__infoHeader {
+    padding: 25px 20px 10px 20px;
+}
+
+.card__infoHeaderContainer {
+    display: flex;
+}
+
+.card__infoBody > img {
+    max-width: 35vw;
+    min-width: 20vw;
+    max-height: 25vh;
+    padding: 10px 10px 20px 0px;
+}
+
+.card__infoBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__infoBottom > div {
+    display: flex;
+    align-items: center;
+}
+
+.card__infoBottom > div > p {
+    padding-left: 8px;
+}
+
