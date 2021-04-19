@@ -38,16 +38,16 @@ function Header() {
                     <Button onClick={() => history.push("/create-experience")}><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/plasticine/100/000000/create-new.png" alt="" /> Create Experience</Button>
                     </div>
                     <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/office/80/000000/heart-health.png" alt="" /> Lovely Experience</Button>
+                    <Button onClick={() => history.push("/experiences/lovely")}><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/office/80/000000/heart-health.png" alt="" /> Lovely Experience</Button>
                     </div>
                     <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/cotton/64/000000/zany-face-icon.png" alt="" /> Crazy Experience</Button>
+                    <Button onClick={() => history.push("/experiences/happy")}><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/cotton/64/000000/zany-face-icon.png" alt="" /> Happy Experience</Button>
                     </div>
                     <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/nolan/80/sad-ghost.png" alt="" /> Emotional Experience</Button>
+                    <Button onClick={() => history.push("/experiences/emotional")}><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/nolan/80/sad-ghost.png" alt="" /> Emotional Experience</Button>
                     </div>
                 </div>} >
-                <Button> Experiences</Button>
+                <Button onClick={() => history.push("/experiences")}> Experiences</Button>
                 </Tippy>
                 
                 </div>
@@ -97,7 +97,7 @@ function Header() {
                 </Tippy>
                 </div>
                 <div>
-                <Button>Digital Journaling</Button>
+                <Button onClick={() => history.push("/digital-journaling")}>Digital Journaling</Button>
                 </div>
                 <div>
                 <Button>A Way Towards Life</Button>

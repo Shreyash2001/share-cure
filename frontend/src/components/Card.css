@@ -10,7 +10,7 @@
 .card__info {
     border: 1px solid lightgray;
     background-color: #fff;
-    max-width: 23vw;
+    max-width: 25vw;
     min-width: 20vw;
     min-height: 43vh;
     max-height: 180vh;
@@ -24,6 +24,22 @@
 
 .card__infoHeaderContainer {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__infoHeaderContainerTag {
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 7px;
+    background: #fd746c !important;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c) !important;  
+    background: linear-gradient(to right, #ff9068, #fd746c) !important; 
+    color: white;
+}
+
+.card__infoHeaderContainerTag > span {
+    font-size: 15px;
 }
 
 .card__infoBody > img {

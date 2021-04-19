@@ -11,6 +11,7 @@ const authUser = asyncHandler(async(req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            journal: user.journal,
             token: generateToken(user._id)
         })
     } else {
@@ -28,7 +29,8 @@ const getUser = asyncHandler(async(req, res) => {
         const newUser = await User.create({
             name,
             email,
-            password
+            password,
+            journal: {description:"Sample Data", tag:"Sample"}
         })
 
         if(newUser) {
@@ -36,6 +38,7 @@ const getUser = asyncHandler(async(req, res) => {
                 _id: newUser._id,
                 name: newUser.name,
                 email: newUser.email,
+                journal: newUser.journal,
                 token: generateToken(newUser._id)
             })
         } else {
@@ -45,4 +48,41 @@ const getUser = asyncHandler(async(req, res) => {
     }
 })
 
-export {getUser, authUser}
+const createUserJournal = asyncHandler(async(req, res) => {
+    const {title, description, tag} = req.body
+    const user = await User.findById(req.user._id)
+    
+    if(user) {
+        const data = {
+            title: title,
+            description: description,
+            tag: tag
+        }
+        user.journal.push(data)
+      const addedJournalUser = await user.save()
+      if(addedJournalUser) {
+        res.status(200).json({addedJournalUser})
+      } else {
+          res.status(400).json({message:"Not added"})
+      }
+       
+    } else {
+        res.status(400).json({message:"Sorry Not Created"})
+    }
+})
+
+const getInfoOfUser = asyncHandler(async(req, res) => {
+    const user = await User.findById(req.user._id)
+    if(user) {
+        res.status(200).json({
+            _id: user._id,
+            journal: user.journal
+
+        })
+    } else {
+        res.status(404).json({message:"User Not Found!!!"})
+    }
+})
+
+
+export {getUser, authUser, createUserJournal, getInfoOfUser}

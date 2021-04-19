@@ -5,13 +5,20 @@ import {
     userLoginReducer, 
     userRegisterReducer
  } from "./reducers/userReducers"
-import { createExperienceReducer, getExperienceReducer } from "./reducers/experienceReducers"
+import { createExperienceReducer, getExperienceByIdReducer, getExperienceReducer, getExperienceLoveReducer, getExperienceHappyReducer, getExperienceEmotionalReducer } from "./reducers/experienceReducers"
+import {allJournalsReducer, journalReducer} from "./reducers/journalReducer"
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
     experiences: getExperienceReducer,
     createdExperience: createExperienceReducer,
+    experienceById: getExperienceByIdReducer,
+    lovelyExperience: getExperienceLoveReducer,
+    happyExperience: getExperienceHappyReducer,
+    emotionalExperience: getExperienceEmotionalReducer,
+    createdJournal: journalReducer,
+    allJournals: allJournalsReducer
 })
 
 const userInfoFromStorage = localStorage.getItem("share-cure-UserInfo") ? JSON.parse(localStorage.getItem("share-cure-UserInfo")) : null

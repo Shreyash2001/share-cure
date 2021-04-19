@@ -1,0 +1,14 @@
+.createjournal > button {
+    width: 300px;
+    height: 50px;
+    border-radius: 22px;
+    margin-left: 40%;
+    margin-top: 80px;
+    background: #fd746c;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  
+    background: linear-gradient(to right, #ff9068, #fd746c); 
+    color: #fff !important;
+    text-transform: inherit !important;
+    font-size: 20px;
+    font-weight: 600;
+}

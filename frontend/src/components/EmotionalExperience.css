@@ -1,0 +1,12 @@
+.emotionalExperience {
+    padding: 20px;
+}
+
+.emotionalExperience > div > h1 {
+    color: orange;
+}
+
+.emotionalExperience__card {
+    display: flex;
+    flex-wrap: wrap;
+}

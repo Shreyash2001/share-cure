@@ -36,7 +36,7 @@ const addExperience = asyncHandler(async(req, res) => {
 })
 
 const getExperience = asyncHandler(async(req, res) => {
-    const experience = await Experience.find({})
+    const experience = await Experience.find({}).sort({createdAt: -1})
     if(experience) {
         res.status(200).json(experience)
     } else {
@@ -44,4 +44,47 @@ const getExperience = asyncHandler(async(req, res) => {
     }
 })
 
-export {addExperience, getExperience}
+const getExperienceById = asyncHandler(async(req, res) => {
+    const experience = await Experience.findById(req.params.id)
+    if(experience) {
+        res.status(200).json(experience)
+    } else {
+        res.status(404).json({message:"Nothing found"})
+    }
+})
+
+const getExperienceLove = asyncHandler(async(req, res) => {
+    const experience = await Experience.find({tag: "love"})
+    if(experience) {
+        res.status(200).json(experience)
+    } else {
+        res.status(404).json({message:"Nothing found"})
+    }
+})
+
+const getExperienceHappy = asyncHandler(async(req, res) => {
+    const experience = await Experience.find({tag: "happy"})
+    if(experience) {
+        res.status(200).json(experience)
+    } else {
+        res.status(404).json({message:"Nothing found"})
+    }
+})
+
+const getExperienceEmotional = asyncHandler(async(req, res) => {
+    const experience = await Experience.find({$or:[{tag: "sad"}, {tag:"hate"}]})
+    if(experience) {
+        res.status(200).json(experience)
+    } else {
+        res.status(404).json({message:"Nothing found"})
+    }
+})
+
+export {
+    addExperience, 
+    getExperience, 
+    getExperienceById, 
+    getExperienceLove, 
+    getExperienceHappy,
+    getExperienceEmotional,
+}

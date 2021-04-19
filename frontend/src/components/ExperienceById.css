@@ -1,0 +1,19 @@
+.experienceById {
+    padding: 30px;
+}
+
+.experienceById__title > h1 {
+    color: orange;
+    font-size: 40px;
+    margin: 0;
+}
+
+.experienceById__title > div > span {
+    border-radius: 15px;
+    padding: 7px;
+    background: #fd746c !important;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c) !important;  
+    background: linear-gradient(to right, #ff9068, #fd746c) !important; 
+    color: white;
+    margin-top: 10px;
+}

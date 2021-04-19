@@ -1,6 +1,20 @@
 import mongoose from "mongoose"
 import bcrypt from "bcrypt"
 
+const journalSchema = mongoose.Schema({
+    title: {
+        type:String
+    },
+    description: {
+        type: String,
+        default:"Sample Data"
+    },
+    tag: {
+        type: String,
+        default:"Sample"
+    },
+})
+
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -15,6 +29,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    journal: [journalSchema]
     
 }, {
     timestamps: true

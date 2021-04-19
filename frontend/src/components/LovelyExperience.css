@@ -1,0 +1,12 @@
+.lovelyExperience {
+    padding: 20px;
+}
+
+.lovelyExperience > div > h1 {
+    color: orange;
+}
+
+.lovelyExperience__card {
+    display: flex;
+    flex-wrap: wrap;
+}

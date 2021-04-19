@@ -1,0 +1,45 @@
+.digitaljournaling__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.digitaljournaling__header > div {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 20px 10px;
+}
+
+.digitaljournaling__header > a > img {
+    width: 6vw;
+    height: 4vh;
+    padding: 20px 10px 20px 10px;
+}
+
+.digitaljournaling__container {
+    width: 50vw;
+    height: 70vh;
+    margin-top: 80px;
+    background: #fd746c;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  
+    background: linear-gradient(to right, #ff9068, #fd746c); 
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.digitaljournaling__container > div {
+    background-color: #fff;
+    width: 40vw;
+    height: 25vh;
+    margin-top: 150px;
+    border-radius: 8px;
+}
+
+.digitaljournaling__container > div > h1 {
+    text-align: center;
+    cursor: pointer;
+}

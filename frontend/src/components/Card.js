@@ -17,15 +17,18 @@ function Card({ id, user, title, description, about, image, link, tag, createdAt
             <div className="card__info">
 
             <div className="card__infoHeader">
+
             <div className="card__infoHeaderContainer">
-
+            <div style={{display:"flex"}}>
             <Avatar src={`https://avatars.dicebear.com/api/gridy/${seed}.svg`} />
-
             <div style={{display:"flex", flexDirection:"column", paddingLeft:"22px"}}>
             <span>{user.substring(0, 4)}</span>
             <span>Posted In</span>
             </div>
-
+            </div>
+            <div className="card__infoHeaderContainerTag">
+              <span>#{tag}</span>
+            </div>
             </div>
 
             <div className="card__infoBody">

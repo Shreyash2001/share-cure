@@ -3,7 +3,9 @@
     top: 0;
     background-color: #fff;
     width: 100%;
-    border-bottom: 1px solid #ff9068;
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
     z-index: 1;
 }
 
