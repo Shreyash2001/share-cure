@@ -51,30 +51,7 @@ function Header() {
                 </Tippy>
                 
                 </div>
-                <div>
-                <Tippy 
-                animation={"scale"} 
-                delay={100}
-                theme={'light'}
-                arrow={false}
-                interactive={true}
-                content={<div className="header__containerLeftButtonsEachContainer">
-                    <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/plasticine/100/000000/create-new.png" alt="" /> Create Thoughts</Button>
-                    </div>
-                    <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/office/80/000000/heart-health.png" alt="" /> Lovely Thoughts</Button>
-                    </div>
-                    <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/cotton/64/000000/zany-face-icon.png" alt="" /> Crazy Thoughts</Button>
-                    </div>
-                    <div className="header__containerLeftButtonsEachContainerItem">
-                    <Button><img style={{width:"20px", height:"20px", marginRight:"10px"}} src="https://img.icons8.com/nolan/80/sad-ghost.png" alt="" /> Emotional Thoughts</Button>
-                    </div>
-                </div>} >
-                <Button> Thoughts</Button>
-                </Tippy>
-                </div>
+                
                 <div>
                 <Tippy 
                 animation={"scale"} 

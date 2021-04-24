@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 import connectDB from "./config/db.js"
 import userRoute from "./routes/userRoutes.js"
 import experienceRoute from "./routes/experienceRoutes.js"
-import thoughtRoute from "./routes/thoughtRoutes.js"
+
 
 
 dotenv.config()
@@ -13,7 +13,6 @@ const app = express()
 
 app.use(express.json())
 
-app.use("/thoughts", thoughtRoute)
 app.use("/experiences", experienceRoute)
 app.use("/users", userRoute)
 

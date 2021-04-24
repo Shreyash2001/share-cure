@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler"
 import Experience from "../models/experienceModel.js"
+import "@tensorflow/tfjs"
 
 const addExperience = asyncHandler(async(req, res) => {
     const {title, about, description, image, link, tag} = req.body
@@ -80,6 +81,23 @@ const getExperienceEmotional = asyncHandler(async(req, res) => {
     }
 })
 
+const createCommentExperience = asyncHandler(async(req, res) => {
+    const experience = await Experience.findById(req.params.id)
+      
+    if(experience) {
+        const userComment = {
+            user: req.user._id,
+            comment: req.body.comment
+        }
+        experience.comments.push(userComment)
+        const updatedExperience = await experience.save()
+        res.status(200).json(updatedExperience.comments)
+    } else {
+        res.status(404).json({message:"Nothing found"})
+    }
+})
+
+
 export {
     addExperience, 
     getExperience, 
@@ -87,4 +105,5 @@ export {
     getExperienceLove, 
     getExperienceHappy,
     getExperienceEmotional,
+    createCommentExperience,
 }

@@ -5,7 +5,7 @@ import {
     userLoginReducer, 
     userRegisterReducer
  } from "./reducers/userReducers"
-import { createExperienceReducer, getExperienceByIdReducer, getExperienceReducer, getExperienceLoveReducer, getExperienceHappyReducer, getExperienceEmotionalReducer } from "./reducers/experienceReducers"
+import { createExperienceReducer, getExperienceByIdReducer, getExperienceReducer, getExperienceLoveReducer, getExperienceHappyReducer, getExperienceEmotionalReducer, getExperienceCommentReducer } from "./reducers/experienceReducers"
 import {allJournalsReducer, journalReducer} from "./reducers/journalReducer"
 
 const reducer = combineReducers({
@@ -17,6 +17,7 @@ const reducer = combineReducers({
     lovelyExperience: getExperienceLoveReducer,
     happyExperience: getExperienceHappyReducer,
     emotionalExperience: getExperienceEmotionalReducer,
+    commentExperience: getExperienceCommentReducer,
     createdJournal: journalReducer,
     allJournals: allJournalsReducer
 })

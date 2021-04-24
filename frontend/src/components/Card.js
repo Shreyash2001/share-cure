@@ -33,9 +33,8 @@ function Card({ id, user, title, description, about, image, link, tag, createdAt
 
             <div className="card__infoBody">
             <Link style={{color:"inherit", textDecoration:"none"}} to={`/experiences/${id}`}><h2>{title}</h2></Link>
-             {image === "Sample" &&   <p>
-                {about}
-                </p>
+             {image === "Sample" &&   
+             <p style={{wordWrap:"break-word"}}>{about.substring(0,300)}</p>
              }
                {image === "Sample" ? <div style={{marginTop:"30px", marginBottom:"40px"}}><a href={link}>{link}</a></div> : <img src={image} alt="card" /> }
             </div>

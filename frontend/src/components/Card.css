@@ -10,7 +10,7 @@
 .card__info {
     border: 1px solid lightgray;
     background-color: #fff;
-    max-width: 25vw;
+    max-width: 22vw;
     min-width: 20vw;
     min-height: 43vh;
     max-height: 180vh;
@@ -40,6 +40,10 @@
 
 .card__infoHeaderContainerTag > span {
     font-size: 15px;
+}
+
+.card__infoBody > a > h2 {
+    word-wrap: break-word;
 }
 
 .card__infoBody > img {

@@ -2,10 +2,13 @@ import axios from "axios"
 import { 
     CREATE_EXPERIENCE_FAIL, 
     CREATE_EXPERIENCE_REQUEST, 
-    CREATE_EXPERIENCE_SUCCESS, 
+    CREATE_EXPERIENCE_SUCCESS,  
     GET_EXPERIENCE_BYID_FAIL, 
     GET_EXPERIENCE_BYID_REQUEST, 
     GET_EXPERIENCE_BYID_SUCCESS, 
+    GET_EXPERIENCE_COMMENT_FAIL, 
+    GET_EXPERIENCE_COMMENT_REQUEST, 
+    GET_EXPERIENCE_COMMENT_SUCCESS, 
     GET_EXPERIENCE_EMOTIONAL_FAIL, 
     GET_EXPERIENCE_EMOTIONAL_REQUEST, 
     GET_EXPERIENCE_EMOTIONAL_SUCCESS, 
@@ -76,7 +79,7 @@ export const createExperience = (title, about, description, image, link, tag) =>
         dispatch({type: CREATE_EXPERIENCE_REQUEST})
 
        const {userLogin:{userInfo}} = getState()
-        console.log(userInfo.token)
+
     const config = {
         headers: {
             "Content-type":"application/json",
@@ -173,3 +176,29 @@ export const getExperienceEmotional = () => (async(dispatch) => {
     }
     
 })
+
+export const createExperienceComment = (id, comment) => (async(dispatch, getState) => {
+    try {
+        dispatch({type: GET_EXPERIENCE_COMMENT_REQUEST})
+        const {userLogin: {userInfo}} = getState()
+
+    const config = {
+        headers: {
+            Authorization: `Bearer ${userInfo.token}`
+        }
+    }
+
+     await axios.post(`/experiences/comment/${id}`, {comment}, config)
+
+    dispatch({
+        type: GET_EXPERIENCE_COMMENT_SUCCESS,
+    })
+    } catch (error) {
+        dispatch({
+            type: GET_EXPERIENCE_COMMENT_FAIL,
+            payload: error.response && error.response.data.message ? error.response.data.message : error.message
+        })
+    }
+    
+})
+

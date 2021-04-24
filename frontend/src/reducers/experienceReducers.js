@@ -6,6 +6,10 @@ import {
     GET_EXPERIENCE_BYID_FAIL,
     GET_EXPERIENCE_BYID_REQUEST,
     GET_EXPERIENCE_BYID_SUCCESS,
+    GET_EXPERIENCE_COMMENT_FAIL,
+    GET_EXPERIENCE_COMMENT_REQUEST,
+    GET_EXPERIENCE_COMMENT_RESET,
+    GET_EXPERIENCE_COMMENT_SUCCESS,
     GET_EXPERIENCE_EMOTIONAL_FAIL,
     GET_EXPERIENCE_EMOTIONAL_REQUEST,
     GET_EXPERIENCE_EMOTIONAL_SUCCESS,
@@ -17,7 +21,7 @@ import {
     GET_EXPERIENCE_LOVE_REQUEST, 
     GET_EXPERIENCE_LOVE_SUCCESS, 
     GET_EXPERIENCE_REQUEST, 
-    GET_EXPERIENCE_SUCCESS 
+    GET_EXPERIENCE_SUCCESS, 
 } from "../constants/experienceConstants"
 
 export const getExperienceReducer = (state = {allExperiences: []}, action) => {
@@ -150,3 +154,27 @@ export const getExperienceEmotionalReducer = (state = {}, action) => {
             return state
     }
 }
+
+export const getExperienceCommentReducer = (state = {}, action) => {
+    switch (action.type) {
+        case GET_EXPERIENCE_COMMENT_REQUEST:
+            return {
+                loading: true
+            }
+        case GET_EXPERIENCE_COMMENT_SUCCESS:
+            return {
+                loading: false,
+                success: true
+            }
+        case GET_EXPERIENCE_COMMENT_FAIL:
+            return {
+                loading: false,
+                error: action.payload
+            } 
+        case GET_EXPERIENCE_COMMENT_RESET:
+            return {} 
+        default:
+            return state
+    }
+}
+

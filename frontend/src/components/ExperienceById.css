@@ -6,6 +6,7 @@
     color: orange;
     font-size: 40px;
     margin: 0;
+    word-wrap: break-word;
 }
 
 .experienceById__title > div > span {
@@ -16,4 +17,46 @@
     background: linear-gradient(to right, #ff9068, #fd746c) !important; 
     color: white;
     margin-top: 10px;
+}
+
+.experienceById__form {
+    margin-top: 30px;
+    border: 1px solid lightgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.experienceById__form > form > textarea[type= "text"] {
+    height: 100px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 92%;
+    border-radius: 12px;
+    padding: 8px;
+    font-size:18px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+.experienceById__form > form > textarea[type= "text"]:focus {
+    box-shadow: 0 0 5px rgb(243, 196, 95);
+    border: 1px solid rgb(243, 196, 95);
+}
+
+.experienceById__form > form > div > button {
+    border-radius: 15px;
+    padding: 7px;
+    background: #fd746c !important;  
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c) !important;  
+    background: linear-gradient(to right, #ff9068, #fd746c) !important; 
+    color: white;
+    margin-top: 10px;
+    text-transform: inherit !important;
+    width: 200px;
 }

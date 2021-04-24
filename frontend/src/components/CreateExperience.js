@@ -58,7 +58,7 @@ function CreateExperience() {
             
             <div className="createExperience__about">
                     <h3 style={{ marginBottom:"10px"}}>Overview</h3>
-                    <textarea type="text" placeholder="Overview" value={about} onChange={(e) => setAbout(e.target.value)} required/>
+                    <textarea type="text" placeholder="*Minimum 300 words required" value={about} onChange={(e) => setAbout(e.target.value)} required/>
                     
             </div>
             </div>
@@ -159,7 +159,7 @@ function CreateExperience() {
 
     useEffect(() => {
 
-      if(title.length !== 0 && about.length !== 0 && description.length !== 0 && tag.length !== 0) {
+      if(title.length !== 0 && about.length >= 300 && description.length >= 700 && tag.length !== 0) {
         setBtnDisabled(false)
       }
 
@@ -203,7 +203,7 @@ function CreateExperience() {
             </Button>
             
             }
-            {loading && <CircularProgress style={{color:"orange"}} />}
+            <div>{loading && <CircularProgress style={{color:"orange"}} />}</div>
           </div>
           
           </>

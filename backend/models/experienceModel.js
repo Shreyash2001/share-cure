@@ -1,5 +1,24 @@
 import mongoose from "mongoose"
 
+const likeSchema = mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }
+})
+
+const commentSchema = mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+    comment: {
+        type: String
+    }
+}, {
+    timestamps: true
+})
+
 const experienceSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -29,10 +48,8 @@ const experienceSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    like: {
-        type: Number,
-        default: 0
-    }
+    likes: [likeSchema],
+    comments: [commentSchema]
 }, {
     timestamps: true
 })
